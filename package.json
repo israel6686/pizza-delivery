@@ -1,0 +1,13 @@
+{
+  "name": "pizza-delivery",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "4.17.1",
+    "node-localstorage": "2.1.6",
+    "jsonwebtoken": "8.5.1",
+    "bcryptjs": "2.4.3",
+    "ajv": "8.5.0",
+    "body-parser": "1.19.0",
+    "request": "2.88.2"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1621802431.json",
+  "title": "Root",
+  "type": "array",
+  "default": [],
+  "items":{
+    "$id": "#root/items",
+    "title": "Items",
+    "type": "object",
+    "required": [
+      "selectedItem",
+      "size",
+      "extras"
+    ],
+    "properties": {
+      "selectedItem": {
+        "$id": "#root/items/selectedItem",
+        "title": "Selecteditem",
+        "type": "string",
+        "enum": ["pizza_one", "pizza_two", "pizza_three"],
+        "default": "",
+        "examples": [
+          "pizza_one", "pizza_two", "pizza_three"
+        ],
+        "pattern": "^.*$"
+      },
+      "size": {
+        "$id": "#root/items/size",
+        "title": "Size",
+        "type": "string",
+        "enum": ["large", "medium","small"],
+        "default": "",
+        "examples": [
+          "large", "medium","small"
+        ],
+        "pattern": "^.*$"
+      },
+      "extras": {
+        "$id": "#root/items/extras",
+        "title": "Extras",
+        "type": "string",
+        "enum": ["olive", "corn", "cheese", "mushrooms"],
+        "default": "",
+        "examples": [
+          "olive", "corn", "cheese", "mushrooms"
+        ],
+        "pattern": "^.*$"
+      }
+    }
+  }
+
+}

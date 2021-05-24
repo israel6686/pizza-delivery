@@ -1,0 +1,5 @@
+{
+	"selectedItem": ["pizza_one", "pizza_two", "pizza_three"],
+	"size" : ["small", "large", "medium"],
+	"extras" : ["olive", "corn", "mushrooms","cheese"]
+}
