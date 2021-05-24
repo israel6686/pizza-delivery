@@ -1,10 +1,10 @@
-# piz=zza-delivery-env
+# pizza-delivery-env
     npm install
     npm start
     lisen on port 6666
 
 
-# piz=zza-delivery-API
+# pizza-delivery-API
 MANAGE_USER: "create or edit user"
 
 PUT /manage_users?userName=xxxxxx&email=xxxxxx@xxxx&address=xxxxx" 
