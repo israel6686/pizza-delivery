@@ -7,7 +7,19 @@ const ajv = new Ajv({schemaId: 'auto'});
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 const stripe = require('./remoteServer/stripe');
+
+
 router.use(jsonParser);
+
+router.use(function (req, res, next) {
+    if (!req.query.userName){
+        res.status(400);
+        res.send("missing mandatory params")
+    }
+    else{
+        next();
+    }
+});
 
 router.post('/login', function(req, res) {
     const user = localStorage.getKey('users', req.query.userName);
@@ -69,11 +81,7 @@ router.post('/charge',(req, res)=>{
     jwt.verify(token, 'supersecret', function(err, decoded) {
         const getToken = localStorage.getKey('tokens', req.query.userName);
         if (err || getToken !== token) return res.status(500).send({ auth: false, message: 'Failed to authenticate token.' });
-        if (!req.body.creditToken){
-            res.status(400).send({errorText : "missing credit token"});
-        }else{
-            stripe.charges(req, res);
-        }
+        stripe.charges(req, res);
     });
 });
 module.exports = router;
